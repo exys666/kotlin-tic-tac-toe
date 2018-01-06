@@ -36,8 +36,9 @@ data class Config(
         }
 
         private fun getBoardSize(prop: Properties): Int = try {
-            prop.getProperty("board.size", "").toInt()
-                    .also { if (it < 3 || it > 10) throw InvalidConfigFileException("Invalid board size") }
+            prop.getProperty("board.size", "").toInt().also {
+                if (it < Board.MIN_SIZE || it > Board.MAX_SIZE) throw InvalidConfigFileException("Invalid board size")
+            }
         } catch (ex: NumberFormatException) {
             throw InvalidConfigFileException("Invalid board size")
         }

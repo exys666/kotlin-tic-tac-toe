@@ -4,5 +4,5 @@ interface Player {
 
     val symbol: Char
 
-    fun move()
+    fun move(board: Board)
 }

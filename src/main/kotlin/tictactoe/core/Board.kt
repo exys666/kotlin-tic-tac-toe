@@ -1,9 +1,10 @@
 package tictactoe.core
 
 class Board constructor(
-        val size: Int,
-        private val fields: Array<Array<Player?>> = Array(size) { Array(size) { null as Player? } }
+        val size: Int
 ) {
+
+    private val fields: Array<Array<Player?>> = Array(size) { Array(size) { null as Player? } }
 
     companion object {
         val MIN_SIZE = 3
