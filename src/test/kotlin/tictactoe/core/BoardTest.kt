@@ -26,7 +26,7 @@ class BoardTest {
         val board = Board(10)
 
         // then
-        for(x in 0 until board.size) {
+        for (x in 0 until board.size) {
             for (y in 0 until board.size) {
                 assertThat(board[x, y]).isNull()
             }
@@ -54,7 +54,7 @@ class BoardTest {
         val board = Board(3)
 
         // when
-        for(x in 0 until board.size) {
+        for (x in 0 until board.size) {
             for (y in 0 until board.size) {
                 board[x, y] = HumanPlayer('X')
             }
@@ -70,7 +70,7 @@ class BoardTest {
         val board = Board(10)
 
         // when
-        for(x in 0 until board.size - 1) {
+        for (x in 0 until board.size - 1) {
             for (y in 0 until board.size) {
                 board[x, y] = HumanPlayer('X')
             }
@@ -91,7 +91,7 @@ class BoardTest {
         val player = HumanPlayer('X')
 
         // when
-        for(x in 0 until board.size) {
+        for (x in 0 until board.size) {
             board[x, 3] = player
         }
 
@@ -107,7 +107,7 @@ class BoardTest {
         val player = HumanPlayer('X')
 
         // when
-        for(y in 0 until board.size) {
+        for (y in 0 until board.size) {
             board[7, y] = player
         }
 
@@ -123,7 +123,7 @@ class BoardTest {
         val player = HumanPlayer('X')
 
         // when
-        for(i in 0 until board.size) {
+        for (i in 0 until board.size) {
             board[i, i] = player
         }
 
@@ -139,7 +139,7 @@ class BoardTest {
         val player = HumanPlayer('X')
 
         // when
-        for(i in 0 until board.size) {
+        for (i in 0 until board.size) {
             board[i, board.size - 1 - i] = player
         }
 

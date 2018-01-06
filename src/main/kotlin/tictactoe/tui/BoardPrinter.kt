@@ -5,7 +5,7 @@ import tictactoe.core.Board
 object BoardPrinter {
 
     fun print(board: Board) {
-        System.out.print("  ")
+        System.out.print("YX")
         for (i in 0 until board.size) {
             System.out.print("  $i ")
         }

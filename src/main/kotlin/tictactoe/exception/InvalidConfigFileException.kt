@@ -1,3 +1,3 @@
 package tictactoe.exception
 
-class InvalidConfigFileException(override val message:String) : RuntimeException(message)
+class InvalidConfigFileException(override val message: String) : RuntimeException(message)
