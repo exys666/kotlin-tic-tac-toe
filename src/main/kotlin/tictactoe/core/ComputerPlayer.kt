@@ -1,6 +1,6 @@
 package tictactoe.core
 
-class HumanPlayer(
+class ComputerPlayer(
         override val symbol: Char
 ) : Player {
 
